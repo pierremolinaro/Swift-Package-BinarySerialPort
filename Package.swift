@@ -7,10 +7,10 @@ import PackageDescription
 //--------------------------------------------------------------------------------------------------
 
 let package = Package (
-  name: "SerialPort",
+  name: "BinarySerialPort",
   platforms: [.macOS (.v15)],
   products: [
-    .library (name: "SerialPort", targets: ["SerialPort"])
+    .library (name: "BinarySerialPort", targets: ["BinarySerialPort"])
   ],
   dependencies: [
     .package (
@@ -20,7 +20,7 @@ let package = Package (
   ],
   targets: [
     .target (
-      name: "SerialPort",
+      name: "BinarySerialPort",
       dependencies: [
         .product (name: "BinarySerialFormat", package: "Swift-Package-BinarySerialFormat")
       ]
