@@ -1,0 +1,14 @@
+{
+  "originHash" : "3d1eb5a8fa0ec887b5fbfc69082e9d1a2335d82a42b5cef4d8bfe6a77067e162",
+  "pins" : [
+    {
+      "identity" : "swift-package-binaryserialformat",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pierremolinaro/Swift-Package-BinarySerialFormat",
+      "state" : {
+        "revision" : "8b971fcee269ce7e0c1fabdd370158be8dc0de2e"
+      }
+    }
+  ],
+  "version" : 3
+}

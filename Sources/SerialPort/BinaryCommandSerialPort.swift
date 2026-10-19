@@ -28,19 +28,25 @@ open class BinaryCommandSerialPort <SEND_CODE : BinarySendCodeProtocol,
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
   public nonisolated func send (command inCommand : SEND_CODE) {
-    self.sendData (BinarySerialFormatter.data (forCommand: inCommand))
+    self.sendData (inCommand.binarySerialData)
   }
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
   public nonisolated func send (encodedU64 inValue : UInt64) {
-    self.sendData (BinarySerialFormatter.data (forU64: inValue))
+    self.sendData (inValue.binarySerialData)
   }
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
   public nonisolated func send (encodedString inValue : String) {
-    self.sendData (BinarySerialFormatter.data (forString: inValue))
+    self.sendData (inValue.binarySerialData)
+  }
+
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  public nonisolated func send (encodedFloat inValue : Float) {
+    self.sendData (inValue.binarySerialData)
   }
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
